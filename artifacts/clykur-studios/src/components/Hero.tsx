@@ -68,15 +68,6 @@ export function Hero() {
           </a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="absolute bottom-8 sm:bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center"
-        >
-          <span className="text-[10px] sm:text-xs text-white/50 tracking-[0.3em] uppercase mb-3 sm:mb-4">Scroll</span>
-          <div className="w-[1px] h-12 sm:h-16 bg-gradient-to-b from-white/50 to-transparent" />
-        </motion.div>
       </div>
 
       <style dangerouslySetInnerHTML={{__html: `
