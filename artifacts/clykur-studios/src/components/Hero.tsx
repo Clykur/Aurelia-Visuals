@@ -3,13 +3,14 @@ import { motion } from "framer-motion";
 export function Hero() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden bg-background">
-      {/* Background Image */}
+      {/* Background Image — absolutely fills entire section */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/55 to-background z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/50 to-background z-10" />
         <img
           src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
           alt="Cinematic Wedding Photography"
-          className="w-full h-full object-cover object-[center_30%] sm:object-center scale-105 origin-center animate-[kenburns_20s_ease-out_infinite_alternate]"
+          style={{ objectPosition: "55% center" }}
+          className="absolute inset-0 w-full h-full object-cover animate-[kenburns_20s_ease-out_infinite_alternate]"
         />
       </div>
 
@@ -41,7 +42,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
-          className="text-sm sm:text-base md:text-xl text-white/70 max-w-xl md:max-w-2xl mb-8 md:mb-12 font-light leading-relaxed"
+          className="text-sm sm:text-base md:text-xl text-white/75 max-w-xl md:max-w-2xl mb-8 md:mb-12 font-light leading-relaxed"
         >
           Premium photography agency for brands, campaigns, and luxury events.
           Crafting visual legacies through a cinematic lens.
@@ -51,7 +52,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
-          className="flex flex-col sm:flex-row gap-3 sm:gap-6 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-6 w-full max-w-xs sm:max-w-none sm:w-auto"
         >
           <a
             href="#portfolio"
