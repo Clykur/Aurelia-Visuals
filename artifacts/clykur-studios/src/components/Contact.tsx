@@ -74,11 +74,11 @@ export function Contact() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-white font-serif text-xl mb-2">Studio</h4>
-                <p className="text-white/60 font-light">12 Lavelle Road, Studio 3A<br />Bengaluru, Karnataka 560001</p>
+                <p className="text-white/60 font-light">Bengaluru, Karnataka</p>
               </div>
               <div>
                 <h4 className="text-white font-serif text-xl mb-2">Inquiries</h4>
-                <a href="mailto:hello@clykurstudios.com" className="text-white/60 font-light hover:text-primary transition-colors">hello@clykurstudios.com</a>
+                <a href="mailto:info@clykur.com" className="text-white/60 font-light hover:text-primary transition-colors">info@clykur.com</a>
               </div>
               <div>
                 <h4 className="text-white font-serif text-xl mb-2">WhatsApp</h4>
