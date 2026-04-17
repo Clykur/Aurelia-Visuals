@@ -1,0 +1,135 @@
+You are a senior frontend developer and UI/UX designer.
+
+Build a modern, premium photography agency website with a strong focus on converting visitors into clients.
+
+Tech Stack:
+- Next.js (App Router)
+- Tailwind CSS
+- Framer Motion (subtle, premium animations)
+- Use next/image for optimization
+
+Design Style:
+- Minimal, luxury, high-end (inspired by Apple-level design)
+- Dark + light balanced theme (mostly dark hero)
+- Smooth typography, lots of whitespace
+- Clean grid layouts
+
+Assets:
+- Use high-quality images/videos from https://www.pexels.com
+- Optionally use CDN (CloudFront-style links) for fast loading
+- Optimize all images (lazy loading, responsive sizes)
+
+---
+
+### Pages / Sections
+
+1. Hero Section (HIGH CONVERSION)
+- Fullscreen background video (photography reel from Pexels)
+- Overlay text:
+  "We Capture Stories That Sell"
+  Subtext: "Premium Photography for Brands, Weddings & Campaigns"
+- CTA buttons:
+  - "Book a Shoot"
+  - "View Portfolio"
+- Subtle fade + parallax ONLY on desktop
+
+---
+
+2. Client Trust Section
+- Logos (use placeholders)
+- Text: "Trusted by 100+ brands worldwide"
+
+---
+
+3. Portfolio Section
+- Masonry grid layout
+- Categories:
+  - Weddings
+  - Fashion
+  - Commercial
+  - Events
+- Hover effects (scale + overlay title)
+- Click opens full-screen gallery
+
+---
+
+4. Services Section
+- Cards:
+  - Wedding Photography
+  - Brand Shoots
+  - Product Photography
+  - Cinematic Videography
+- Each with short persuasive copy + CTA
+
+---
+
+5. About Section
+- Agency story
+- Highlight expertise, storytelling, creativity
+- Add founder-style message
+
+---
+
+6. Testimonials
+- 3–5 client reviews
+- Use realistic names/photos
+
+---
+
+7. Pricing / Packages (optional but high conversion)
+- Starter / Premium / Elite
+- Clean pricing cards
+
+---
+
+8. Final CTA Section
+- "Let’s Create Something Beautiful Together"
+- Big CTA: "Get a Quote"
+
+---
+
+9. Contact Section
+- Form (name, email, project type, message)
+- WhatsApp CTA button
+
+---
+
+### Fonts
+- Use premium fonts:
+  - Headings: Playfair Display / Syne / Clash Display
+  - Body: Inter / DM Sans
+
+---
+
+### Performance (VERY IMPORTANT)
+- Mobile-first optimization
+- Disable heavy animations on mobile
+- Use optimized Pexels assets (compressed)
+- Lazy load all images/videos
+- Keep bundle lightweight
+
+---
+
+### Animations
+- Use Framer Motion:
+  - Fade-in + slight translate
+  - No heavy scroll-linked animations on mobile
+- Keep animations smooth and minimal
+
+---
+
+### Extra Features (for sales)
+- Sticky navbar with CTA
+- Floating "Book Now" button
+- Urgency line: "Limited bookings available this month"
+
+---
+
+### Deliverables
+- Clean folder structure
+- Reusable components
+- Fully responsive design
+- Production-ready code
+
+Goal:
+Create a premium, high-converting photography agency website that feels modern, fast, and visually stunning.
