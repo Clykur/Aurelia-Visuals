@@ -50,9 +50,9 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-[#0a0a0a]">
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+    <section id="contact" className="py-16 md:py-24 bg-[#0a0a0a]">
+      <div className="container mx-auto px-5 sm:px-6 max-w-6xl">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-24">
 
           {/* Contact Info */}
           <motion.div

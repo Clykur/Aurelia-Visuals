@@ -11,13 +11,13 @@ const brands = [
 
 export function Brands() {
   return (
-    <section className="py-12 border-y border-white/5 bg-background overflow-hidden">
-      <div className="container mx-auto px-6">
-        <p className="text-center text-xs tracking-[0.2em] text-white/40 uppercase mb-8">
+    <section className="py-10 md:py-12 border-y border-white/5 bg-background overflow-hidden">
+      <div className="container mx-auto px-5 sm:px-6">
+        <p className="text-center text-[10px] sm:text-xs tracking-[0.2em] text-white/40 uppercase mb-6 md:mb-8">
           Trusted by 100+ brands worldwide
         </p>
         <motion.div
-          className="flex flex-wrap justify-center items-center gap-10 md:gap-20"
+          className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 md:gap-20"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -31,7 +31,7 @@ export function Brands() {
               whileHover={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="text-white font-serif text-xl md:text-2xl tracking-widest uppercase cursor-default transition-opacity duration-300"
+              className="text-white font-serif text-lg sm:text-xl md:text-2xl tracking-widest uppercase cursor-default transition-opacity duration-300"
             >
               {brand}
             </motion.span>

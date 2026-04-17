@@ -9,8 +9,9 @@ export function Navbar() {
   React.useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      if (window.scrollY > 50) setMobileMenuOpen(false);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -21,17 +22,21 @@ export function Navbar() {
     { name: "Pricing", href: "#pricing" },
   ];
 
+  const close = () => setMobileMenuOpen(false);
+
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/90 backdrop-blur-md border-b border-white/5 py-4" : "bg-transparent py-6"
+        isScrolled || mobileMenuOpen
+          ? "bg-[#0f0f0f]/95 backdrop-blur-md border-b border-white/5 py-3 md:py-4"
+          : "bg-transparent py-5 md:py-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-serif font-bold tracking-wider text-white">
+      <div className="container mx-auto px-5 sm:px-6 flex items-center justify-between">
+        <a href="#" className="text-xl sm:text-2xl font-serif font-bold tracking-wider text-white">
           CLYKUR<span className="text-primary">.</span>
         </a>
 
@@ -58,37 +63,42 @@ export function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-white p-1 touch-manipulation"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-background border-b border-white/10"
+            transition={{ duration: 0.25 }}
+            className="md:hidden bg-[#0f0f0f] overflow-hidden border-b border-white/10"
           >
-            <div className="flex flex-col px-6 py-8 space-y-6">
-              {navLinks.map((link) => (
-                <a
+            <div className="flex flex-col px-6 py-6 space-y-1">
+              {navLinks.map((link, i) => (
+                <motion.a
                   key={link.name}
                   href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-lg font-serif text-white/80 hover:text-primary"
+                  onClick={close}
+                  initial={{ opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.05 }}
+                  className="text-base font-serif text-white/80 hover:text-primary py-3 border-b border-white/5 last:border-0 transition-colors"
                 >
                   {link.name}
-                </a>
+                </motion.a>
               ))}
               <a
                 href="#contact"
-                onClick={() => setMobileMenuOpen(false)}
-                className="inline-block text-center px-6 py-3 bg-primary text-primary-foreground font-semibold tracking-widest uppercase w-full mt-4"
+                onClick={close}
+                className="mt-4 block text-center px-6 py-3.5 bg-primary text-black font-semibold tracking-widest uppercase text-sm"
               >
                 Book Now
               </a>

@@ -35,13 +35,13 @@ export function FloatingButton() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 16 }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2"
+          className="fixed bottom-5 right-4 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end gap-1.5 sm:gap-2"
         >
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.15 }}
-            className="text-[10px] tracking-[0.18em] uppercase text-white/40 mr-1"
+            className="hidden sm:block text-[10px] tracking-[0.18em] uppercase text-white/40 mr-1"
           >
             Limited slots this month
           </motion.p>
@@ -49,9 +49,9 @@ export function FloatingButton() {
             href="#contact"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
-            className="flex items-center gap-3 bg-primary text-black text-xs font-bold tracking-[0.2em] uppercase px-6 py-4 shadow-xl shadow-primary/20"
+            className="flex items-center gap-2 sm:gap-3 bg-primary text-black text-[10px] sm:text-xs font-bold tracking-[0.2em] uppercase px-4 sm:px-6 py-3 sm:py-4 shadow-xl shadow-primary/20 touch-manipulation"
           >
-            <span className="w-2 h-2 rounded-full bg-black/30 animate-pulse" />
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-black/30 animate-pulse" />
             Book Now
           </motion.a>
         </motion.div>

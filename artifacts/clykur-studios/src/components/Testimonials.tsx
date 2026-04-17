@@ -37,7 +37,7 @@ export function Testimonials() {
   const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
-    <section id="testimonials" className="py-32 bg-[#050505] relative flex items-center min-h-[70vh]">
+    <section id="testimonials" className="py-20 md:py-32 bg-[#050505] relative flex items-center min-h-[60vh] md:min-h-[70vh]">
       <div className="absolute inset-0 z-0 opacity-20">
         <img
           src="https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
@@ -47,7 +47,7 @@ export function Testimonials() {
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-[#050505]" />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-5 sm:px-6 relative z-10 w-full">
         <div className="max-w-4xl mx-auto">
           <motion.div
             key={currentIndex}
@@ -55,14 +55,14 @@ export function Testimonials() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5 }}
-            className="text-center"
+            className="text-center px-2"
           >
-            <span className="text-primary text-6xl font-serif leading-none block mb-6">"</span>
-            <p className="text-2xl md:text-4xl font-serif text-white leading-relaxed mb-12">
+            <span className="text-primary text-5xl sm:text-6xl font-serif leading-none block mb-4 sm:mb-6">"</span>
+            <p className="text-lg sm:text-2xl md:text-4xl font-serif text-white leading-relaxed mb-8 md:mb-12">
               {testimonials[currentIndex].quote}
             </p>
             <div>
-              <p className="text-white font-semibold tracking-wide uppercase text-sm mb-1">
+              <p className="text-white font-semibold tracking-wide uppercase text-xs sm:text-sm mb-1">
                 {testimonials[currentIndex].author}
               </p>
               <p className="text-primary text-xs tracking-widest uppercase">
@@ -71,27 +71,27 @@ export function Testimonials() {
             </div>
           </motion.div>
 
-          <div className="flex justify-center items-center gap-8 mt-16">
+          <div className="flex justify-center items-center gap-6 sm:gap-8 mt-10 md:mt-16">
             <button
               onClick={prev}
-              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all touch-manipulation"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={18} />
             </button>
-            <div className="flex gap-3">
+            <div className="flex gap-2 sm:gap-3">
               {testimonials.map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentIndex(idx)}
-                  className={`h-[2px] transition-all duration-300 ${idx === currentIndex ? "w-8 bg-primary" : "w-4 bg-white/20"}`}
+                  className={`h-[2px] transition-all duration-300 touch-manipulation ${idx === currentIndex ? "w-6 sm:w-8 bg-primary" : "w-3 sm:w-4 bg-white/20"}`}
                 />
               ))}
             </div>
             <button
               onClick={next}
-              className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
+              className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all touch-manipulation"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={18} />
             </button>
           </div>
         </div>
