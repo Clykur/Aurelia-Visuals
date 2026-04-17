@@ -2,15 +2,30 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function FloatingButton() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [pastHero, setPastHero] = useState(false);
+  const [nearFooter, setNearFooter] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > window.innerHeight * 0.8);
+      setPastHero(window.scrollY > window.innerHeight * 0.8);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    if (!footer) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setNearFooter(entry.isIntersecting),
+      { threshold: 0.05 }
+    );
+    observer.observe(footer);
+    return () => observer.disconnect();
+  }, []);
+
+  const isVisible = pastHero && !nearFooter;
 
   return (
     <AnimatePresence>
@@ -23,10 +38,10 @@ export function FloatingButton() {
           className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2"
         >
           <motion.p
-            initial={{ opacity: 0, x: 10 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.15 }}
-            className="text-[10px] tracking-[0.2em] uppercase text-white/40 mr-1"
+            className="text-[10px] tracking-[0.18em] uppercase text-white/40 mr-1"
           >
             Limited slots this month
           </motion.p>

@@ -26,7 +26,7 @@ export function Contact() {
             <div className="space-y-8">
               <div>
                 <h4 className="text-white font-serif text-xl mb-2">Studio</h4>
-                <p className="text-white/60 font-light">124 Art District, Loft 4B<br/>New York, NY 10012</p>
+                <p className="text-white/60 font-light">12 Lavelle Road, Studio 3A<br/>Bengaluru, Karnataka 560001</p>
               </div>
               <div>
                 <h4 className="text-white font-serif text-xl mb-2">Inquiries</h4>
@@ -34,7 +34,7 @@ export function Contact() {
               </div>
               <div>
                 <h4 className="text-white font-serif text-xl mb-2">Direct</h4>
-                <a href="tel:+12125550199" className="text-white/60 font-light hover:text-primary transition-colors">+1 (212) 555-0199</a>
+                <a href="tel:+919900000199" className="text-white/60 font-light hover:text-primary transition-colors">+91 99000 00199</a>
               </div>
             </div>
           </motion.div>

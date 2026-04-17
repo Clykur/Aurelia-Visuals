@@ -22,8 +22,8 @@ export function Philosophy() {
             {/* Decorative block */}
             <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-primary/10 -z-10" />
             <div className="absolute top-12 -left-6 bg-background border border-white/10 p-6 shadow-2xl backdrop-blur-sm hidden md:block">
-              <p className="font-serif text-white text-xl">Est. 2018</p>
-              <p className="text-primary text-xs tracking-widest uppercase mt-1">New York</p>
+              <p className="font-serif text-white text-xl">Est. 2025</p>
+              <p className="text-primary text-xs tracking-widest uppercase mt-1">Bengaluru, India</p>
             </div>
           </motion.div>
 
