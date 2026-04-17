@@ -4,39 +4,44 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Clykur Studios didn't just photograph our campaign; they elevated our entire brand identity. Their cinematic approach is unmatched in the industry.",
-    author: "Elena Rostova",
-    role: "Creative Director, Vogue"
+    quote: "Clykur Studios didn't just photograph our campaign — they elevated our entire brand identity. Their cinematic approach is unlike anything we've experienced.",
+    author: "Priya Mehra",
+    role: "Creative Director, Velour Magazine"
   },
   {
-    quote: "The way they capture light and raw emotion turned our wedding into a masterpiece. Looking at the photos feels like watching a beautiful film.",
-    author: "James & Sarah Kensington",
+    quote: "The way they capture light and raw emotion turned our wedding into a masterpiece. Looking at the photos feels like watching a beautiful film we never want to end.",
+    author: "Rohan & Anika Sharma",
     role: "Private Clients"
   },
   {
-    quote: "Professional, visionary, and relentlessly perfectionist. Clykur is the only agency we trust with our high-stakes global product launches.",
-    author: "Marcus Chen",
-    role: "CMO, Aurum Luxury"
-  }
+    quote: "Professional, visionary, and relentlessly perfectionist. Clykur is the only studio we trust with our high-stakes seasonal launches.",
+    author: "Aditi Kapoor",
+    role: "Brand Head, Maison Orev"
+  },
+  {
+    quote: "From pre-shoot planning to final delivery, every detail was handled with extraordinary care. The results spoke for themselves — our engagement doubled overnight.",
+    author: "Karan Nair",
+    role: "Founder, Solène Co."
+  },
+  {
+    quote: "Working with Clykur Studios felt collaborative and inspiring. They understood our vision immediately and returned photos that exceeded every expectation.",
+    author: "Meera & Dev Lal",
+    role: "Private Clients"
+  },
 ];
 
 export function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const next = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const prev = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  const next = () => setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+  const prev = () => setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
 
   return (
     <section id="testimonials" className="py-32 bg-[#050505] relative flex items-center min-h-[70vh]">
       <div className="absolute inset-0 z-0 opacity-20">
-        <img 
-          src="https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80" 
-          alt="Studio Texture" 
+        <img
+          src="https://images.pexels.com/photos/2749481/pexels-photo-2749481.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
+          alt="Studio Texture"
           className="w-full h-full object-cover object-center grayscale"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/80 to-[#050505]" />
@@ -67,7 +72,7 @@ export function Testimonials() {
           </motion.div>
 
           <div className="flex justify-center items-center gap-8 mt-16">
-            <button 
+            <button
               onClick={prev}
               className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
             >
@@ -75,13 +80,14 @@ export function Testimonials() {
             </button>
             <div className="flex gap-3">
               {testimonials.map((_, idx) => (
-                <div 
-                  key={idx} 
+                <button
+                  key={idx}
+                  onClick={() => setCurrentIndex(idx)}
                   className={`h-[2px] transition-all duration-300 ${idx === currentIndex ? "w-8 bg-primary" : "w-4 bg-white/20"}`}
                 />
               ))}
             </div>
-            <button 
+            <button
               onClick={next}
               className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all"
             >

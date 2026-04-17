@@ -6,14 +6,8 @@ export function FloatingButton() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button after scrolling past hero section (approx 100vh)
-      if (window.scrollY > window.innerHeight * 0.8) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+      setIsVisible(window.scrollY > window.innerHeight * 0.8);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -21,17 +15,31 @@ export function FloatingButton() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.a
-          href="#contact"
-          initial={{ opacity: 0, y: 20, scale: 0.8 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          exit={{ opacity: 0, y: 20, scale: 0.8 }}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="fixed bottom-8 right-8 z-50 px-6 py-4 bg-primary text-primary-foreground font-semibold tracking-widest uppercase shadow-2xl shadow-primary/20 border border-primary-foreground/10"
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 16 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2"
         >
-          Book Now
-        </motion.a>
+          <motion.p
+            initial={{ opacity: 0, x: 10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.15 }}
+            className="text-[10px] tracking-[0.2em] uppercase text-white/40 mr-1"
+          >
+            Limited slots this month
+          </motion.p>
+          <motion.a
+            href="#contact"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            className="flex items-center gap-3 bg-primary text-black text-xs font-bold tracking-[0.2em] uppercase px-6 py-4 shadow-xl shadow-primary/20"
+          >
+            <span className="w-2 h-2 rounded-full bg-black/30 animate-pulse" />
+            Book Now
+          </motion.a>
+        </motion.div>
       )}
     </AnimatePresence>
   );

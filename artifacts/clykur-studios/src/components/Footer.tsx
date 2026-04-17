@@ -10,7 +10,10 @@ export function Footer() {
               CLYKUR<span className="text-primary">.</span>
             </a>
             <p className="text-white/50 font-light max-w-sm">
-              Clykur Studios is a premium photography agency based in New York, capturing iconic moments globally.
+              Premium photography for brands, weddings, and campaigns. Crafting visual legacies through a cinematic lens.
+            </p>
+            <p className="text-white/25 text-xs tracking-widest uppercase mt-3">
+              Estd. 2025 — Bengaluru, India
             </p>
           </div>
           
