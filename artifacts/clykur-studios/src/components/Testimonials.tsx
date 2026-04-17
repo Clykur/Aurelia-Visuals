@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Clykur Studios didn't just photograph our campaign — they elevated our entire brand identity. Their cinematic approach is unlike anything we've experienced.",
+    quote: "Aurelia Visuals didn't just photograph our campaign, they elevated our entire brand identity. Their cinematic approach is unlike anything we've experienced.",
     author: "Priya Mehra",
     role: "Creative Director, Velour Magazine"
   },
@@ -14,7 +14,7 @@ const testimonials = [
     role: "Private Clients"
   },
   {
-    quote: "Professional, visionary, and relentlessly perfectionist. Clykur is the only studio we trust with our high-stakes seasonal launches.",
+    quote: "Professional, visionary, and relentlessly perfectionist. Aurelia is the only studio we trust with our high-stakes seasonal launches.",
     author: "Aditi Kapoor",
     role: "Brand Head, Maison Orev"
   },
@@ -24,7 +24,7 @@ const testimonials = [
     role: "Founder, Solène Co."
   },
   {
-    quote: "Working with Clykur Studios felt collaborative and inspiring. They understood our vision immediately and returned photos that exceeded every expectation.",
+    quote: "Working with Aurelia Visuals felt collaborative and inspiring. They understood our vision immediately and returned photos that exceeded every expectation.",
     author: "Meera & Dev Lal",
     role: "Private Clients"
   },

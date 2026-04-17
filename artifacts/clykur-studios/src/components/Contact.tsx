@@ -12,7 +12,7 @@ function buildWhatsAppUrl(fields: {
   message: string;
 }) {
   const text = [
-    `*New Inquiry — Clykur Studios*`,
+    `*New Inquiry — Aurelia Visuals (A Clykur product)*`,
     ``,
     `*Name:* ${fields.firstName} ${fields.lastName}`.trim(),
     `*Email:* ${fields.email || "—"}`,
@@ -172,7 +172,7 @@ export function Contact() {
                 />
               </div>
 
-              <div className="pt-6 flex flex-col sm:flex-row gap-4">
+              <div className="pt-6 flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-center">
                 <button
                   type="submit"
                   className="px-8 py-4 bg-primary text-black font-semibold tracking-widest uppercase hover:bg-primary/90 transition-colors w-full sm:w-auto"
@@ -191,7 +191,7 @@ export function Contact() {
                 </button>
               </div>
 
-              <p className="text-white/20 text-xs tracking-wide pt-2">
+              <p className="text-white/20 text-xs tracking-wide pt-2 text-center max-w-lg mx-auto">
                 Submitting opens WhatsApp with your inquiry pre-filled to +91 81792 99096.
               </p>
             </form>

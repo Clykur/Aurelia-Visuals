@@ -35,8 +35,11 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="inline-block mb-5 px-4 py-1.5 border border-primary/30 bg-black/40 backdrop-blur-sm"
         >
-          <span className="text-primary text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase">
-            Clykur Studios
+          <span className="text-primary text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase block">
+            Aurelia Visuals
+          </span>
+          <span className="text-white/55 text-[9px] sm:text-[10px] font-medium tracking-[0.18em] uppercase mt-1.5 block">
+            A Clykur product
           </span>
         </motion.div>
 

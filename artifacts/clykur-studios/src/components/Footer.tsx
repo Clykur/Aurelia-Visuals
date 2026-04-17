@@ -8,8 +8,13 @@ export function Footer() {
 
           {/* Brand */}
           <div className="max-w-xs">
-            <a href="#" className="text-2xl sm:text-3xl font-serif font-bold tracking-wider text-white mb-3 block">
-              CLYKUR<span className="text-primary">.</span>
+            <a href="#" className="mb-3 block">
+              <span className="text-2xl sm:text-3xl font-serif font-bold tracking-wider text-white block">
+                Aurelia Visuals
+              </span>
+              <span className="text-[10px] sm:text-xs text-white/40 tracking-[0.2em] uppercase mt-1 block">
+                A Clykur product
+              </span>
             </a>
             <p className="text-white/50 font-light text-sm sm:text-base leading-relaxed">
               Premium photography for brands, weddings, and campaigns. Crafting visual legacies through a cinematic lens.
@@ -38,7 +43,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col sm:flex-row justify-between items-center pt-6 md:pt-8 border-t border-white/10 text-xs text-white/30 tracking-wider gap-3">
-          <p>© {new Date().getFullYear()} Clykur Studios. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Aurelia Visuals · A Clykur product. All rights reserved.</p>
           <div className="flex space-x-4 sm:space-x-6">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

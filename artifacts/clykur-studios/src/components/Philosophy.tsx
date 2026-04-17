@@ -51,20 +51,20 @@ export function Philosophy() {
             </h2>
             <div className="space-y-4 sm:space-y-6 text-white/60 font-light text-base sm:text-lg leading-relaxed">
               <p>
-                At Clykur Studios, we believe that true luxury lies in the details that others overlook. Every frame we capture is meticulously composed, lit, and directed to evoke a specific emotional response.
+                At Aurelia Visuals, we believe that true luxury lies in the details that others overlook. Every frame we capture is meticulously composed, lit, and directed to evoke a specific emotional response.
               </p>
               <p>
                 Our aesthetic is rooted in cinematic storytelling. Whether we are shooting a high-fashion editorial or a clandestine elopement, our approach remains the same: finding the extraordinary in the authentic.
               </p>
               <p>
-                We are not for everyone. We are for those who understand that an image is not just a memory — it is a legacy.
+                We are not for everyone. We are for those who understand that an image is not just a memory, it is a legacy.
               </p>
             </div>
 
             <div className="mt-8 sm:mt-12 flex items-center gap-4">
               <div className="h-[1px] w-10 sm:w-12 bg-primary" />
               <p className="text-white text-xs sm:text-sm font-semibold tracking-widest uppercase">
-                The Clykur Standard
+                The Aurelia Standard
               </p>
             </div>
           </motion.div>

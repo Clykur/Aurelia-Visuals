@@ -15,7 +15,7 @@ export const projects: Project[] = [
     title: "Luminary Brand Campaign",
     category: "Brand",
     coverImg: "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "A full brand identity campaign for Luminary — a luxury skincare house. Shot across three days in a converted Parisian atelier, this series captures the tension between raw materials and polished result.",
+    description: "A full brand identity campaign for Luminary, a luxury skincare house. Shot across three days in a converted Parisian atelier, this series captures the tension between raw materials and polished result.",
     images: [
       "https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/936048/pexels-photo-936048.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -31,7 +31,7 @@ export const projects: Project[] = [
     title: "Solstice Editorial",
     category: "Editorial",
     coverImg: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "Shot for a leading fashion magazine's summer edition. The Solstice editorial explores light, shadow, and the quiet power of stillness — a meditation on form through the lens.",
+    description: "Shot for a leading fashion magazine's summer edition. The Solstice editorial explores light, shadow, and the quiet power of stillness, a meditation on form through the lens.",
     images: [
       "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -79,7 +79,7 @@ export const projects: Project[] = [
     title: "Dusk Editorial",
     category: "Editorial",
     coverImg: "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    description: "Golden hour. Six looks. One rooftop. Dusk is a tribute to that ten-minute window when everything turns cinematic — and every photographer knows exactly what we mean.",
+    description: "Golden hour. Six looks. One rooftop. Dusk is a tribute to that ten-minute window when everything turns cinematic, and every photographer knows exactly what we mean.",
     images: [
       "https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
       "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",

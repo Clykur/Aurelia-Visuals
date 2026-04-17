@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Clykur Studios"
+title = "Aurelia Visuals"
 version = "1.0.0"
 id = "artifacts/clykur-studios"
 router = "path"

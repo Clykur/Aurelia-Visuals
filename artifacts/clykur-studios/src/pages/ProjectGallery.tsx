@@ -53,12 +53,18 @@ export default function ProjectGallery() {
           <span className="group-hover:-translate-x-1 transition-transform inline-block">←</span>
           <span>Back</span>
         </button>
-        <span
-          className="font-serif text-lg text-white cursor-pointer"
+        <button
+          type="button"
+          className="text-center cursor-pointer"
           onClick={() => navigate("/")}
         >
-          Clykur<span className="text-primary">.</span>
-        </span>
+          <span className="font-serif text-sm md:text-lg text-white block leading-tight">
+            Aurelia Visuals
+          </span>
+          <span className="text-[9px] md:text-[10px] text-white/40 tracking-[0.2em] uppercase mt-0.5 block">
+            A Clykur product
+          </span>
+        </button>
         <button
           onClick={goToContact}
           className="text-sm tracking-widest uppercase text-primary border border-primary/40 px-4 py-1.5 hover:bg-primary hover:text-black transition-all"

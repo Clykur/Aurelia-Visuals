@@ -36,8 +36,13 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-5 sm:px-6 flex items-center justify-between">
-        <a href="#" className="text-xl sm:text-2xl font-serif font-bold tracking-wider text-white">
-          CLYKUR<span className="text-primary">.</span>
+        <a href="#" className="flex flex-col leading-tight group">
+          <span className="text-xl sm:text-2xl font-serif font-bold tracking-wider text-white group-hover:text-white/90 transition-colors">
+            Aurelia Visuals
+          </span>
+          <span className="text-[9px] sm:text-[10px] text-white/45 tracking-[0.2em] uppercase mt-0.5">
+            A Clykur product
+          </span>
         </a>
 
         {/* Desktop Nav */}
