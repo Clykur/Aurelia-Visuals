@@ -1,6 +1,7 @@
 import { useParams, useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import type { MouseEvent } from "react";
 import { projects } from "@/data/projects";
 
 export default function ProjectGallery() {
@@ -9,6 +10,15 @@ export default function ProjectGallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const project = projects.find((p) => p.slug === slug);
+
+  const goToContact = (e: MouseEvent) => {
+    e.preventDefault();
+    navigate("/");
+    setTimeout(() => {
+      const el = document.getElementById("contact");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }, 120);
+  };
 
   if (!project) {
     return (
@@ -49,12 +59,12 @@ export default function ProjectGallery() {
         >
           Clykur<span className="text-primary">.</span>
         </span>
-        <a
-          href="/#contact"
+        <button
+          onClick={goToContact}
           className="text-sm tracking-widest uppercase text-primary border border-primary/40 px-4 py-1.5 hover:bg-primary hover:text-black transition-all"
         >
           Book Now
-        </a>
+        </button>
       </header>
 
       {/* Hero */}
@@ -160,12 +170,12 @@ export default function ProjectGallery() {
         >
           Let's work together.
         </motion.h2>
-        <a
-          href="/#contact"
+        <button
+          onClick={goToContact}
           className="inline-block bg-primary text-black text-sm font-semibold tracking-widest uppercase px-10 py-4 hover:bg-primary/80 transition-colors"
         >
           Get a Quote
-        </a>
+        </button>
       </section>
 
       {/* Lightbox */}
