@@ -9,7 +9,7 @@ export function Hero() {
         <img
           src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=1920&q=80"
           alt="Cinematic Wedding Photography"
-          className="w-full h-full object-cover object-center scale-105 origin-center animate-[kenburns_20s_ease-out_infinite_alternate]"
+          className="w-full h-full object-cover object-[center_30%] sm:object-center scale-105 origin-center animate-[kenburns_20s_ease-out_infinite_alternate]"
         />
       </div>
 
